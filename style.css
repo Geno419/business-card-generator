@@ -1,0 +1,43 @@
+#name-and-title {
+  grid-area: name-and-title;
+  align-items: center;
+  justify-content: left;
+  display: inline-block;
+}
+#name {
+  font-size: 1.2em;
+}
+#contact-info {
+  grid-area: contact-info;
+  align-items: center;
+  justify-content: left;
+  display: flex;
+}
+#logo {
+  grid-area: logo;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+#card {
+  display: grid;
+  grid-template-columns: 120px 120px 120px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "name-and-title name-and-title logo"
+    "contact-info contact-info logo";
+  height: 200px;
+  border-radius: 25px;
+  border: 2px solid #73ad21;
+  padding: 20px;
+  background-color: rgb(32, 56, 122);
+  color: rgb(212, 245, 245);
+}
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
