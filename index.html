@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Card Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Business Card Generator</h1>
+    <form action="submit.html" method="get" id="card-form">
+      <label for="first-name">First name: </label>
+      <input type="text" id="first-name" required />
+      <label for="last-name">Last name: </label>
+      <input type="text" id="last-name" />
+      <label for="company">Company: </label>
+      <input type="text" id="company" required />
+      <label for="job-itle">Job title: </label>
+      <input type="text" id="job-title" required />
+      <label for="email">email: </label>
+      <input type="email" id="email" required />
+      <label for="phone-number">Phone number: </label>
+      <input type="tel" id="phone-number" required />
+      <button type="submit">Generate!</button>
+    </form>
+  </body>
+</html>
