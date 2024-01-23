@@ -12,6 +12,8 @@ function handleSubmit(event) {
   const firstNameInput = document.getElementById("first-name");
   const lastNameInput = document.getElementById("last-name");
   const jobTitleInput = document.getElementById("job-title");
+  const emailInput = document.getElementById("email");
+  const PhoneNumberInput = document.getElementById("phone-number");
 
   if (!/^[a-z]{3,}$/i.test(firstNameInput.value)) {
     const firstNameError = document.getElementById("first-name-error");
@@ -27,9 +29,23 @@ function handleSubmit(event) {
   }
   if (!/^[a-z\s]+$/gi.test(jobTitleInput.value)) {
     const jobTitleError = document.getElementById("job-title-error");
-    jobTitleError.innerText = "Job Title only must be letters";
+    jobTitleError.innerText = "Job Title must be letters";
+    event.preventDefault();
+  }
+  if (!/[\w]+\@([a-z]+\.[a-z]+)+$/gi.test(emailInput.value)) {
+    const emailError = document.getElementById("email-error");
+    emailError.innerText = "incorrect email format";
+    event.preventDefault();
+  }
+
+  if (
+    !/(^(\+44|07))+\d+(-\d+)*$/gi.test(PhoneNumberInput.value) ||
+    PhoneNumberInput.value.length <= 11
+  ) {
+    const PhoneNumberError = document.getElementById("phone-number-error");
+    PhoneNumberError.innerText =
+      "must start with + or 0. dashes may be included. minimum 11 digits";
     event.preventDefault();
   }
 }
-
 cardForm.addEventListener("submit", handleSubmit);
