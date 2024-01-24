@@ -27,3 +27,4 @@ function selectLogo(event) {
   selectedLogo = event.target.alt;
   companyLogo.innerHTML = `<img src="./logos/${selectedLogo}.jpg" alt="company logo" />`;
 }
+2;
