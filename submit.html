@@ -8,13 +8,44 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="logo-selector">
+      <h2>Please Select your logo</h2>
+      <img src="logos/logo1.jpg" alt="logo1" onclick="selectLogo(event)" />
+      <img src="logos/logo2.jpg" alt="logo2" onclick="selectLogo(event)" />
+      <img src="logos/logo3.jpg" alt="logo3" onclick="selectLogo(event)" />
+      <img src="logos/logo4.jpg" alt="logo4" onclick="selectLogo(event)" />
+      <img src="logos/logo5.jpg" alt="logo5" onclick="selectLogo(event)" />
+    </div>
+
     <div id="card">
       <div id="name-and-title">
         <p id="name"></p>
         <p id="title"></p>
       </div>
-      <div id="contact-info">contact</div>
-      <div id="logo">logo</div>
+      <div id="contact-info"></div>
+      <div id="logo">
+        <div id="company-logo"></div>
+
+        <p id="company-name"></p>
+      </div>
+    </div>
+    <div class="change-color">
+      <h2>Please Select your card background</h2>
+      <div class="color-selector">
+        <div onclick="selectBackground(event)" id="black"></div>
+        <div onclick="selectBackground(event)" id="blue"></div>
+        <div onclick="selectBackground(event)" id="red"></div>
+        <div onclick="selectBackground(event)" id="white"></div>
+        <div onclick="selectBackground(event)" id="orange"></div>
+        <div onclick="selectBackground(event)" id="pink"></div>
+      </div>
+      <div class="change-color">
+        <h2>Please Select your text color</h2>
+        <div class="color-selector">
+          <div onclick="selectBackground(event)" id="black"></div>
+          <div onclick="selectBackground(event)" id="white"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
